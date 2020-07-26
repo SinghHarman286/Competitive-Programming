@@ -10,6 +10,16 @@ class DoublyLinkedList:
         self.tail = None
         self.length = 0
     
+    def leng(self):
+        current = self.head
+        counter = 0
+
+        while current:
+            counter += 1
+            current = current.next
+        
+        print(counter)
+    
     def push(self, value):
         newNode = Node(value)
         if not self.head:
@@ -116,7 +126,7 @@ class DoublyLinkedList:
         prevNode.next = newNode
         newNode.prev = prevNode
         newNode.next = nextNode
-        nextNodeprev = newNode
+        nextNode.prev = newNode
 
         self.length += 1
 
@@ -159,6 +169,32 @@ class DoublyLinkedList:
             node = next
         
         return self
+    
+    # AlgoExpert
+    def setHead(self, value):
+        node = Node(value)
+
+        if not self.head:
+            self.head = node
+            self.tail = node
+        else:
+            prevHead = self.head
+            self.head = node
+            self.head.next = prevHead
+            prevHead.prev = self.head
+        return self
+
+    def setTail(self, value):
+        node = Node(value)
+
+        if not self.head:
+            self.head = node
+            self.tail = node
+        else:
+            prevTail = self.tail
+            prevTail.next = node
+            node.prev = prevTail
+            self.tail = node
 
     def print(self):
         arr = []
@@ -186,6 +222,7 @@ dll.insert(0, 12412)
 dll.remove(1)
 dll.print() # [12412, 3, 124]
 dll.reverse() # [124, 3, 12412]
+print("So Bro the the length is \n")
+dll.insert(0, 12412)
+dll.leng()
 dll.print()
-
-print(dll.length)
