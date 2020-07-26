@@ -34,3 +34,6 @@ class Solution:
         else:
             l.next = ListNode()
             self.giveList(l.next, num)
+
+
+# Other Solution SC: O(1) | TC: O(n)
