@@ -67,7 +67,6 @@ class Queues2:
     
     def enqueue(self, val):
         newNode = Node(val)
-
         if not self.first:
             self.first = newNode
             self.last = newNode
@@ -79,7 +78,6 @@ class Queues2:
         return self.length
     
     def dequeue(self):
-
         if not self.first:
             return None
 
