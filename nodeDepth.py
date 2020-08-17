@@ -1,4 +1,3 @@
-
 class BT:
     def __init__(self, value):
         self.value = value
@@ -6,9 +5,7 @@ class BT:
         self.right = None
 
 def nodeDepths(root):
-
     sum = 0
-
     return nodeDepthsHelper(root, sum)
 
 def nodeDepthsHelper(root, sum):
