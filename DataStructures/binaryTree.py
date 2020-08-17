@@ -88,13 +88,11 @@ class BST:
         current = self.root
 
         while current or stack:
-            
             if current:
                 stack.append(current)
                 current = current.left
             else:
                 current = stack.pop()
-                data.append(current.value)
                 current = current.right
         return data
 
