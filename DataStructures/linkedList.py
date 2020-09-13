@@ -26,7 +26,7 @@ class LinkedList:
     def pop(self):
         if not self.head:
             return None
-        
+
         current = self.head
         newTail = current
 
@@ -112,11 +112,11 @@ class LinkedList:
         return True
     
     def remove(self, index):
-        if index < 0 or index > self.length:
+        if index < 0 or index >= self.length:
             return None
         elif index == 0:
             return self.shift()
-        elif index == self.length:
+        elif index == self.length - 1:
             return self.pop()
         else:
             prevNode = self.get(index - 1)

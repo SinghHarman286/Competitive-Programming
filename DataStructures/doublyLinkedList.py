@@ -133,12 +133,12 @@ class DoublyLinkedList:
         return True
     
     def remove(self, index):
-        if index < 0  or index > self.length:
+        if index < 0  or index >= self.length:
             return None
         if index == 0:
             self.shift()
             return self
-        if index == self.length:
+        if index == self.length - 1:
             self.pop()
             return self
         
@@ -170,7 +170,6 @@ class DoublyLinkedList:
         
         return self
     
-    # AlgoExpert
     def setHead(self, value):
         node = Node(value)
 
@@ -222,7 +221,11 @@ dll.insert(0, 12412)
 dll.remove(1)
 dll.print() # [12412, 3, 124]
 dll.reverse() # [124, 3, 12412]
-print("So Bro the the length is \n")
 dll.insert(0, 12412)
-dll.leng()
+print("\n\n")
 dll.print()
+print(f"the length is : ")
+dll.leng()
+
+
+

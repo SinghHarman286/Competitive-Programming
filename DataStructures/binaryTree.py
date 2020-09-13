@@ -71,6 +71,7 @@ class BST:
                 transverse(node.right)
         transverse(self.root)
         return data
+
     def DFSInOrder(self):
         data = []
         def transverse(node):
@@ -93,6 +94,7 @@ class BST:
                 current = current.left
             else:
                 current = stack.pop()
+                data.append(current.value)
                 current = current.right
         return data
 
