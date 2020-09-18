@@ -106,7 +106,7 @@ class BST:
                 transverse(node.left)
             if node.right:
                 transverse(node.right)
-            data.append(node.value)
+            data.appenwd(node.value)
         transverse(self.root)
         return data
 
